@@ -15,7 +15,7 @@ for i in range(x1,x2):
 for i in range(a1,a2):
     for j in range(b1,b2):
         graph[i][j] = 0
-        check = True
+
 
 #최소 최대 x1y1 x2y2로 최소 직사각형 넓이 구하기
 
@@ -26,7 +26,8 @@ for i in range(x1,x2):
             m1 = min(m1,i)
             n1 = max(n1,j)
             m2 = max(m2,i)
-            n2 = min(n2,j)
+            n2 = min(n2,j)        
+            check = True
 
 size = (m2-m1+1)*(n1-n2+1)
 
