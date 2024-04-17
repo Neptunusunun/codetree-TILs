@@ -5,7 +5,7 @@ x1,y1,x2,y2 = x1+1000,y1+1000,x2+1000,y2+1000
 a1,b1,a2,b2 = a1+1000,b1+1000,a2+1000,b2+1000
 
 graph = [ [ 0 for _ in range(2000)] for _ in range(2000)]
-
+check= False
 #첫번째 사각형 넓이 표시
 for i in range(x1,x2):
     for j in range(y1,y2):
@@ -15,6 +15,7 @@ for i in range(x1,x2):
 for i in range(a1,a2):
     for j in range(b1,b2):
         graph[i][j] = 0
+        check = True
 
 #최소 최대 x1y1 x2y2로 최소 직사각형 넓이 구하기
 
@@ -29,4 +30,7 @@ for i in range(x1,x2):
 
 size = (m2-m1+1)*(n1-n2+1)
 
-print(size)
+if check:
+    print(size)
+else:
+    print(0)
