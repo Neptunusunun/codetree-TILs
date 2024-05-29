@@ -11,7 +11,7 @@ else:
 
 #이진수 변환하기
 answer = 0
-for j in range(len(a)-1,0,-1):
+for j in range(len(a)-1,-1,-1):
     answer += (2**j) * a[len(a)-1-j]
 
 print(answer)
